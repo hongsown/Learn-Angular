@@ -14,4 +14,5 @@ export class AppComponent {
   handler() {
     alert('clicked')
   }
+  tags = ['angular', 'js', 'ts']
 }

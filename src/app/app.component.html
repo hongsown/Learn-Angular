@@ -1,4 +1,3 @@
-<app-hello></app-hello>
 {{ title }}
 <!-- Text interpolation -->
 <p>{{ user.name }}</p>
@@ -13,3 +12,20 @@
 <br />
 <br />
 <input type="text" [ngModel]="title" (ngModelChange)="title = $event" />
+
+<!--*ngIf it will remove comp to DOM if use hidden it will display done comp do not remove DOM  -->
+
+<app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
+<ng-template #under18>
+  <p>Under 18</p>
+</ng-template>
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }}
+<button (click)="user.age = user.age + 1">+</button>
+
+<!-- *ngFor -->
+<br />
+<br />
+<button *ngFor="let tag of tags; last as isLast" [class.right-margin]="!isLast">
+  {{ tag }}
+</button>
