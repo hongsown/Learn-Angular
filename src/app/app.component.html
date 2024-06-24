@@ -29,3 +29,18 @@ Age: {{ user.age }}
 <button *ngFor="let tag of tags; last as isLast" [class.right-margin]="!isLast">
   {{ tag }}
 </button>
+
+<div
+  class="box"
+  [class]="{ 'red-border': isDanger, 'yellow-bg': isWarning }"
+></div>
+
+<button (click)="isDanger = !isDanger">Toggle danger</button>
+<br />
+<button (click)="isWarning = !isWarning">Toggle warning</button>
+
+<!-- Output binding -->
+<br />
+<br />
+<h1>output binding</h1>
+<app-author-list></app-author-list>

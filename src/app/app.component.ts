@@ -15,4 +15,6 @@ export class AppComponent {
     alert('clicked')
   }
   tags = ['angular', 'js', 'ts']
+  isDanger = false
+  isWarning = false
 }
