@@ -3,28 +3,20 @@
 <p>{{ user.name }}</p>
 <p>{{ user.age }}</p>
 <!-- Property binding use [property]-->
-<input type="text" [value]="user.name" />
+<!-- <input type="text" [value]="user.name" /> -->
 <!-- Event binding use (click)-->
 
-<button type="button" (click)="handler()">Click me!</button>
+<!-- <button type="button" (click)="handler()">Click me!</button> -->
 
 <!-- Two-way binding use [(ngModel)] -->
+<!-- <br />
 <br />
-<br />
-<input type="text" [ngModel]="title" (ngModelChange)="title = $event" />
+<input type="text" [ngModel]="title" (ngModelChange)="title = $event" /> -->
 
 <!--*ngIf it will remove comp to DOM if use hidden it will display done comp do not remove DOM  -->
 
-<app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
-<ng-template #under18>
-  <p>Under 18</p>
-</ng-template>
-<button (click)="user.age = user.age - 1">-</button>
-Age: {{ user.age }}
-<button (click)="user.age = user.age + 1">+</button>
-
 <!-- *ngFor -->
-<br />
+<!-- <br />
 <br />
 <button *ngFor="let tag of tags; last as isLast" [class.right-margin]="!isLast">
   {{ tag }}
@@ -37,10 +29,28 @@ Age: {{ user.age }}
 
 <button (click)="isDanger = !isDanger">Toggle danger</button>
 <br />
-<button (click)="isWarning = !isWarning">Toggle warning</button>
+<button (click)="isWarning = !isWarning">Toggle warning</button> -->
 
 <!-- Output binding -->
-<br />
+<!-- <br />
 <br />
 <h1>output binding</h1>
-<app-author-list></app-author-list>
+<app-author-list></app-author-list> -->
+short syntax <input type="text" [(ngModel)]="title" />
+<br />
+<!-- same with  -->
+full syntax<input
+  type="text"
+  [ngModel]="title"
+  (ngModelChange)="title = $event"
+  #nameInput
+/>
+<button (click)="showLast = !showLast">Show last</button>
+<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
+<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
+<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
+<div *ngIf="showLast">
+  <app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
+</div>
+
+<button #buttonElement (click)="toggleComp.toggle()">toggle</button>

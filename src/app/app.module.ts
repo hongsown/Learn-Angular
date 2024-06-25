@@ -6,6 +6,7 @@ import { HelloComponent } from './hello/hello.component';
 import { FormsModule } from '@angular/forms';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
+import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { AuthorDetailComponent } from './author-detail/author-detail.component';
     HelloComponent,
     AuthorListComponent,
     AuthorDetailComponent,
+    TwowaybindingComponent,
 
   ],
   imports: [
