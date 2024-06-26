@@ -46,11 +46,21 @@ full syntax<input
   #nameInput
 />
 <button (click)="showLast = !showLast">Show last</button>
-<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
-<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
-<app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
-<div *ngIf="showLast">
-  <app-twowaybinding #toggleComp [(checked)]="checked"></app-twowaybinding>
-</div>
+<app-twowaybinding #toggleComp [(checked)]="questions.question1">
+  <h3>Question 1</h3>
+  <div class="question">Question1</div>
+  <div class="content">Content question 1</div>
+</app-twowaybinding>
+<app-twowaybinding #toggleComp [(checked)]="questions.question2">
+  <h3>Question 2</h3>
+  <div class="question">Question2</div>
+  <div class="content">Content question 2</div>
+  <button class="skip">Skip</button>
+</app-twowaybinding>
 
-<button #buttonElement (click)="toggleComp.toggle()">toggle</button>
+<br />
+<span>======================</span>
+<br />
+<app-ng-template></app-ng-template>
+<ng-template #linkTemplate let-l="link"> {{ l }} </ng-template>
+<tabs [navs]="navs" [linkTemplate]="linkTemplate"></tabs>

@@ -14,7 +14,8 @@ export class TwowaybindingComponent implements OnInit {
 
   ngOnInit() { }
 
-  toggle() {
+  toggle(item: any) {
+    console.log("click", item.target)
     this.checked = !this.checked;
     this.checkedChange.emit(this.checked);
   }

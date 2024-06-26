@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { TabContainerComponent } from './tabs.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
     AuthorListComponent,
     AuthorDetailComponent,
     TwowaybindingComponent,
+    NgTemplateComponent,
+    TabContainerComponent
 
   ],
   imports: [

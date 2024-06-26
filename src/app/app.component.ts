@@ -34,4 +34,11 @@ export class AppComponent {
     console.log(this.toggleComp)
     this.toggleComp?.changes.subscribe(console.log)
   }
+  questions = {
+    question1: true,
+    question2: false
+  }
+  navs = [
+    'link', 'title', 'alo'
+  ]
 }
